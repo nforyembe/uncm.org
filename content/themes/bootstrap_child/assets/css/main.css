@@ -18,11 +18,11 @@ body {
 
 a {
   border: none;
-  color: #C45911;
+  color: #2E87C8;
   text-decoration: none;
 }
 a:hover {
-  color: #7030A0;
+  color: #C45911;
   text-decoration: none;
 }
 
@@ -34,7 +34,7 @@ h5,
 h6 {
   font-family: '', Arial, Times, sans-serif;
   font-weight: 800;
-  color: #C45911;
+  color: #2E87C8;
 }
 
 ul,
@@ -53,6 +53,11 @@ button a {
 
 /* Tablet Breakpoint */
 /* Desktop Breakpoint */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+}
 .image {
   overflow: hidden;
 }
@@ -224,7 +229,7 @@ button a {
 }
 
 .bg-custom-primary {
-  background: #C45911;
+  background: #2E87C8;
 }
 .bg-custom-primary a {
   color: #FFFFFF;
@@ -236,18 +241,18 @@ button a {
   background: #333333;
 }
 .bg-custom-primary-transparent {
-  background: rgba(196, 89, 17, 0.9);
+  background: rgba(46, 135, 200, 0.9);
 }
 
 .text-custom-primary {
-  color: #C45911 !important;
+  color: #2E87C8 !important;
 }
 
 .shadow-custom-primary {
-  box-shadow: 3px 3px 10px #C45911;
+  box-shadow: 3px 3px 10px #2E87C8;
 }
 .shadow-custom-primary-sm {
-  box-shadow: 1px 1px 3px #C45911;
+  box-shadow: 1px 1px 3px #2E87C8;
 }
 
 .color-overlay-custom-primary::before, .color-overlay-custom-primary-to-transparent::before, .color-overlay-custom-primary-to-transparent-to-bottom-right::before, .color-overlay-custom-primary-to-transparent-to-bottom-left::before, .color-overlay-custom-primary-to-transparent-to-top-right::before, .color-overlay-custom-primary-to-transparent-to-top-left::before, .color-overlay-custom-primary-to-transparent-to-right::before, .color-overlay-custom-primary-to-transparent-to-left::before, .color-overlay-custom-primary-to-transparent-to-bottom::before, .color-overlay-custom-primary-to-transparent-to-top::before, .color-overlay-custom-primary-gradient::before {
@@ -256,38 +261,38 @@ button a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(196, 89, 17, 0.5);
+  background: rgba(46, 135, 200, 0.5);
   border-radius: inherit;
 }
 .color-overlay-custom-primary-gradient::before {
-  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), rgba(196, 89, 17, 0.5), transparent);
+  background: linear-gradient(to top, rgba(46, 135, 200, 0.9), rgba(46, 135, 200, 0.5), transparent);
 }
 .color-overlay-custom-primary-to-transparent::before, .color-overlay-custom-primary-to-transparent-to-bottom-right::before, .color-overlay-custom-primary-to-transparent-to-bottom-left::before, .color-overlay-custom-primary-to-transparent-to-top-right::before, .color-overlay-custom-primary-to-transparent-to-top-left::before, .color-overlay-custom-primary-to-transparent-to-right::before, .color-overlay-custom-primary-to-transparent-to-left::before, .color-overlay-custom-primary-to-transparent-to-bottom::before, .color-overlay-custom-primary-to-transparent-to-top::before {
-  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to top, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-top::before {
-  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to top, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-bottom::before {
-  background: linear-gradient(to bottom, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to bottom, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-left::before {
-  background: linear-gradient(to left, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to left, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-right::before {
-  background: linear-gradient(to right, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to right, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-top-left::before {
-  background: linear-gradient(to top-left, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to top-left, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-top-right::before {
-  background: linear-gradient(to top-right, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to top-right, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-bottom-left::before {
-  background: linear-gradient(to bottom-left, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to bottom-left, rgba(46, 135, 200, 0.9), transparent);
 }
 .color-overlay-custom-primary-to-transparent-to-bottom-right::before {
-  background: linear-gradient(to bottom-right, rgba(196, 89, 17, 0.9), transparent);
+  background: linear-gradient(to bottom-right, rgba(46, 135, 200, 0.9), transparent);
 }
 
 .custom-line-overhead-primary::before, .custom-line-overhead-primary-full::before {
@@ -297,7 +302,7 @@ button a {
   height: 10px;
   margin: auto;
   margin-bottom: 15px;
-  background: #C45911;
+  background: #2E87C8;
 }
 .custom-line-overhead-primary-full::before {
   width: 100%;
@@ -305,21 +310,21 @@ button a {
 }
 
 .btn-custom-primary, .btn-custom-primary-outline {
-  background: #C45911;
+  background: #2E87C8;
   color: #FFFFFF;
 }
 .btn-custom-primary-outline {
   background: #FFFFFF;
-  border: solid 1px #C45911;
-  color: #C45911;
+  border: solid 1px #2E87C8;
+  color: #2E87C8;
 }
 .btn-custom-primary:hover, .btn-custom-primary-outline:hover {
-  background: #c25811;
+  background: #2e86c6;
   color: #FFFFFF;
 }
 
 .bg-custom-secondary {
-  background: #7030A0;
+  background: #C45911;
 }
 .bg-custom-secondary a {
   color: #FFFFFF;
@@ -331,18 +336,18 @@ button a {
   background: #333333;
 }
 .bg-custom-secondary-transparent {
-  background: rgba(112, 48, 160, 0.9);
+  background: rgba(196, 89, 17, 0.9);
 }
 
 .text-custom-secondary {
-  color: #7030A0 !important;
+  color: #C45911 !important;
 }
 
 .shadow-custom-secondary {
-  box-shadow: 3px 3px 10px #7030A0;
+  box-shadow: 3px 3px 10px #C45911;
 }
 .shadow-custom-secondary-sm {
-  box-shadow: 1px 1px 3px #7030A0;
+  box-shadow: 1px 1px 3px #C45911;
 }
 
 .color-overlay-custom-secondary::before, .color-overlay-custom-secondary-to-transparent::before, .color-overlay-custom-secondary-to-transparent-to-bottom-right::before, .color-overlay-custom-secondary-to-transparent-to-bottom-left::before, .color-overlay-custom-secondary-to-transparent-to-top-right::before, .color-overlay-custom-secondary-to-transparent-to-top-left::before, .color-overlay-custom-secondary-to-transparent-to-right::before, .color-overlay-custom-secondary-to-transparent-to-left::before, .color-overlay-custom-secondary-to-transparent-to-bottom::before, .color-overlay-custom-secondary-to-transparent-to-top::before, .color-overlay-custom-secondary-gradient::before {
@@ -351,38 +356,38 @@ button a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(112, 48, 160, 0.5);
+  background: rgba(196, 89, 17, 0.5);
   border-radius: inherit;
 }
 .color-overlay-custom-secondary-gradient::before {
-  background: linear-gradient(to top, rgba(112, 48, 160, 0.9), rgba(112, 48, 160, 0.5), transparent);
+  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), rgba(196, 89, 17, 0.5), transparent);
 }
 .color-overlay-custom-secondary-to-transparent::before, .color-overlay-custom-secondary-to-transparent-to-bottom-right::before, .color-overlay-custom-secondary-to-transparent-to-bottom-left::before, .color-overlay-custom-secondary-to-transparent-to-top-right::before, .color-overlay-custom-secondary-to-transparent-to-top-left::before, .color-overlay-custom-secondary-to-transparent-to-right::before, .color-overlay-custom-secondary-to-transparent-to-left::before, .color-overlay-custom-secondary-to-transparent-to-bottom::before, .color-overlay-custom-secondary-to-transparent-to-top::before {
-  background: linear-gradient(to top, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-top::before {
-  background: linear-gradient(to top, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to top, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-bottom::before {
-  background: linear-gradient(to bottom, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to bottom, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-left::before {
-  background: linear-gradient(to left, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to left, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-right::before {
-  background: linear-gradient(to right, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to right, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-top-left::before {
-  background: linear-gradient(to top-left, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to top-left, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-top-right::before {
-  background: linear-gradient(to top-right, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to top-right, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-bottom-left::before {
-  background: linear-gradient(to bottom-left, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to bottom-left, rgba(196, 89, 17, 0.9), transparent);
 }
 .color-overlay-custom-secondary-to-transparent-to-bottom-right::before {
-  background: linear-gradient(to bottom-right, rgba(112, 48, 160, 0.9), transparent);
+  background: linear-gradient(to bottom-right, rgba(196, 89, 17, 0.9), transparent);
 }
 
 .custom-line-overhead-secondary::before, .custom-line-overhead-secondary-full::before {
@@ -392,7 +397,7 @@ button a {
   height: 10px;
   margin: auto;
   margin-bottom: 15px;
-  background: #7030A0;
+  background: #C45911;
 }
 .custom-line-overhead-secondary-full::before {
   width: 100%;
@@ -400,16 +405,16 @@ button a {
 }
 
 .btn-custom-secondary, .btn-custom-secondary-outline {
-  background: #7030A0;
+  background: #C45911;
   color: #FFFFFF;
 }
 .btn-custom-secondary-outline {
   background: #FFFFFF;
-  border: solid 1px #7030A0;
-  color: #7030A0;
+  border: solid 1px #C45911;
+  color: #C45911;
 }
 .btn-custom-secondary:hover, .btn-custom-secondary-outline:hover {
-  background: #6f309e;
+  background: #c25811;
   color: #FFFFFF;
 }
 
@@ -897,10 +902,10 @@ button a {
 }
 
 .bg-custom-gradient {
-  background: linear-gradient(to bottom, #C45911, #7030A0);
+  background: linear-gradient(to bottom, #2E87C8, #C45911);
 }
 .bg-custom-gradient-reverse {
-  background: linear-gradient(to bottom, #7030A0, #C45911);
+  background: linear-gradient(to bottom, #C45911, #2E87C8);
 }
 
 .block {
@@ -986,10 +991,10 @@ button a {
   background: #ffffff;
   border-radius: 0;
   border: none;
-  box-shadow: 0px 0px 1.5px #C45911;
+  box-shadow: 0px 0px 1.5px #2E87C8;
   padding-left: 25px;
   padding-right: 25px;
-  color: #C45911;
+  color: #2E87C8;
 }
 
 /* Tablet Breakpoint */
@@ -1027,11 +1032,12 @@ main .page-content img {
   height: 30px;
 }
 .navbar .nav-item .nav-link {
+  color: #000000;
   font-weight: bold;
   text-transform: uppercase;
 }
 .navbar .nav-item:hover .nav-link, .navbar .nav-item.active .nav-link {
-  color: #C45911 !important;
+  color: #2E87C8 !important;
 }
 .navbar .dropdown-menu {
   padding-left: 10px;
@@ -1042,9 +1048,6 @@ main .page-content img {
 /* Tablet Breakpoint */
 /* Desktop Breakpoint */
 @media screen and (min-width: 992px) {
-  .navbar .nav-item .nav-link {
-    padding: 0.5em 1em;
-  }
   .navbar .dropdown-menu {
     width: max-content;
     min-width: 250px;
@@ -1052,7 +1055,7 @@ main .page-content img {
   }
 }
 footer {
-  background: #333333;
+  background: #2E87C8;
   color: #EEEEEE;
 }
 footer a, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
@@ -1079,7 +1082,7 @@ footer #backToTop {
   /* Set a background color
   /* Add a mouse pointer on hover */
   border: none;
-  background-color: #7030A0;
+  background-color: #C45911;
   cursor: pointer;
   /* Text color
   /* Increase font size */
@@ -1100,7 +1103,7 @@ footer #backToTop:hover {
 .page-banner .page-title {
   position: absolute;
   bottom: -10px;
-  background: #C45911;
+  background: #2E87C8;
   color: #ffffff !important;
   padding: 20px 30px;
   width: 100%;
@@ -1165,7 +1168,7 @@ footer #backToTop:hover {
 
 /* For Image Popup */
 .gallery-modal {
-  background: rgba(112, 48, 160, 0.5);
+  background: rgba(196, 89, 17, 0.5);
   /* Next & previous buttons */
 }
 .gallery-modal .modal-dialog {
