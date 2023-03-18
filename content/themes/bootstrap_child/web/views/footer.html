@@ -1,0 +1,26 @@
+<footer class="py-5 text-center">
+
+	<div class="container">
+		<div class="row jusity-content-center">
+
+			<div class="col-12">
+			</div>
+		
+			<div class="col-12">
+				<small>
+					<p><strong><?= defined('ORG_ACRONYM') ? '&copy;' . ORG_ACRONYM . ', ' . date('Y') : ''; ?></strong></p>
+					<p><strong><?= defined('ORG_ADDRESS') ? nl2br(ORG_ADDRESS) : ''; ?></strong></p>
+
+					<p>
+						<?= defined('ORG_NUMBER') ? '<a href="tel:' . ORG_NUMBER . '">' . ORG_NUMBER . '</a>' : ''; ?>
+						<span class="d-lg-none"><br></span> <span class="d-none d-lg-inline">&emsp;</span>
+						<?= defined('ORG_EMAIL') ? '<a href="mailto:' . ORG_EMAIL . '">' . ORG_EMAIL . '</a>' : ''; ?>
+					</p>
+				</small>
+			</div>
+		</div>
+	</div>
+	
+	<a onclick="scroll_to_top()" id="backToTop" title="Back to Top" data-toggle="tooltip">&uarr;</a>
+
+</footer>
