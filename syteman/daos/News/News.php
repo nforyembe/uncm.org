@@ -13,6 +13,7 @@ class News extends Feature
 
         // For front end... the page on which the features will be displayed
         $this->feature_page = 'news';
+        $this->template_preview = 'news-preview.html';
 
         $this->feature_category_table = 'news_categories';
         $this->feature_category_content_table = 'news_category_content';

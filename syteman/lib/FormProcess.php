@@ -122,25 +122,25 @@ class FormProcess {
 
             if (!defined('DEVELOPMENT')) {
 
-                if (isset($_SESSION['captcha_code'])) {
+                // if (isset($_SESSION['captcha_code'])) {
                     
-                    if (isset($_POST['captcha'])) {
+                //     if (isset($_POST['captcha'])) {
                             
-                        if($_POST['captcha'] != $_SESSION['captcha_code']) {
-                            $errors[] = 'Wrong Captcha!!!';
-                        }
+                //         if($_POST['captcha'] != $_SESSION['captcha_code']) {
+                //             $errors[] = 'Wrong Captcha!!!';
+                //         }
                         
-                    } else {
+                //     } else {
 
-                        $errors[] = 'No captcha verification was sent';
+                //         $errors[] = 'No captcha verification was sent';
                         
-                    }
+                //     }
 
-                } else {
+                // } else {
                     
-                    $errors[] = 'Captcha verification is not active';
+                //     $errors[] = 'Captcha verification is not active';
                     
-                }
+                // }
 
             }
 
@@ -158,12 +158,12 @@ class FormProcess {
                     . "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
                 $email_subject = $submitted['subject'] . " from " 
-                    . (defined('SITE_ACRONYM') ? SITE_ACRONYM : "") 
+                    . (defined('ORG_ACRONYM') ? ORG_ACRONYM : "") 
                     . " Contact Form";
 
                 $email_message = '<p>' . nl2br($submitted['message']) . '</p>' . $submitted['names'] . ', ' . $submitted['email'];
                 
-                $email_send_to = defined('SITE_EMAIL') ? SITE_EMAIL : 'webmaster@yems.group';
+                $email_send_to = defined('ORG_EMAIL') ? ORG_EMAIL : 'webmaster@yems.group';
 
                 $this->send_with_mail($email_send_to, $email_subject, $email_message, $email_header, $progress);
                 
@@ -222,7 +222,7 @@ class FormProcess {
                 } else {
 
                     $form_feedback[] = 'Ooops!! For some reason your submission was not received, Please Try again.' 
-                        . (defined('SITE_EMAIL') ? ' <strong>If this persists, please contact us directly at ' . SITE_EMAIL . '</strong>' : '' );
+                        . (defined('ORG_EMAIL') ? ' <strong>If this persists, please contact us directly at ' . ORG_EMAIL . '</strong>' : '' );
 
                 }
 
@@ -276,7 +276,7 @@ class FormProcess {
             
                     // var_dump($insert_data_into_db); die;
 
-                    $form_feedback[] = 'Ooops!! For some reason your email could not be added, Please Try again.<br><strong>[' . $insert_data_into_db['message'] . ']</strong><br>' . (defined('SITE_EMAIL') ? ' If this persists, please contact us directly at ' . SITE_EMAIL . '' : '' );
+                    $form_feedback[] = 'Ooops!! For some reason your email could not be added, Please Try again.<br><strong>[' . $insert_data_into_db['message'] . ']</strong><br>' . (defined('ORG_EMAIL') ? ' If this persists, please contact us directly at ' . ORG_EMAIL . '' : '' );
                     
                     // Log the error to a logfile.
                     $log = new Log;

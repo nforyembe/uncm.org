@@ -64,8 +64,7 @@
             </div>
     
             <div class="mb-3">
-                <label for="message">Message</label>
-                <textarea name="message" class="form-control" id="message" rows="8"><?php if(isset($submitted["message"])) echo $submitted['message']; ?></textarea>
+                <textarea name="message" placeholder="Message" class="form-control" id="message" rows="8"><?php if(isset($submitted["message"])) echo $submitted['message']; ?></textarea>
             </div>
     
             <div class="row">
@@ -74,8 +73,7 @@
                     <input type="submit" name="submit" value="Send Message" class="form-control btn btn-custom-primary" />
                 </div>
                 
-                <div class="mb-3 col-lg-8 order-1">
-                    <label for="captcha">Captcha</label> 
+                <div class="mb-3 col-lg-8 order-1"> 
                     <span id="captcha-info" class="info"></span>
                     <input type="text" name="captcha" id="captcha" class="form-control captchaInputBox" placeholder="copy the captcha code">
                 </div>
@@ -95,7 +93,7 @@
 
 <div class="col-lg-4 py-lg-5">
     <div class="p-5">
-        <p><strong><?=ORG_TITLE ?></strong><br><?=nl2br(ORG_ADDRESS) ?></p>
+        <p class=""><strong><span class="text-custom-primary"><?=ORG_TITLE ?></span></strong><br><?=nl2br(ORG_ADDRESS) ?></p>
         <p><?=ORG_EMAIL ?><br><?=ORG_NUMBER ?></p>        
     </div>
 </div>

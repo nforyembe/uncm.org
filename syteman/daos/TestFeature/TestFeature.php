@@ -14,6 +14,7 @@ class TestFeature extends Feature
 
         // For front end... the page on which the features will be displayed
         $this->feature_page = 'test_features';
+        // $this->template_preview = 'default-feature-preview.html';
 
         // Define the names of the tables as on db
         $this->feature_category_table = 'test_feature_categories';

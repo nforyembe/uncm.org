@@ -948,11 +948,12 @@ button a {
 /* Desktop Breakpoint */
 .carousel {
   width: 100%;
-  max-height: 60vh;
+}
+.carousel .carousel-item {
+  text-align: center;
 }
 .carousel .carousel-item img {
-  max-height: 60vh;
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 .carousel .carousel-item .carousel-caption {
@@ -972,12 +973,6 @@ button a {
 /* Tablet Breakpoint */
 /* Breakpoint Desktop */
 @media screen and (min-width: 992px) {
-  .carousel {
-    max-height: 85vh;
-  }
-  .carousel .carousel-item img {
-    max-height: 85vh;
-  }
   .carousel .carousel-item .carousel-caption {
     font-size: 30px;
   }
@@ -1024,6 +1019,9 @@ main .page-content img {
 
 /* Tablet Breakpoint */
 /* Desktop Breakpoint */
+.navbar .logo {
+  color: #2E87C8;
+}
 .navbar .logo img {
   height: 50px;
   transition: all 0.5s;
@@ -1032,7 +1030,7 @@ main .page-content img {
   height: 30px;
 }
 .navbar .nav-item .nav-link {
-  color: #000000;
+  color: #2E87C8;
   font-weight: bold;
   text-transform: uppercase;
 }

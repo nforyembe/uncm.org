@@ -6,8 +6,8 @@
 <?php if (isset($page_data['image'])): ?>
     <?php if (!empty($page_data['image'])): ?>
     
-        <div class="col-12 px-0 px-0 page-image">
-            <div class="image">
+        <div class="col-12 px-0 px-0 mt-lg-3 page-image">
+            <div class="text-center">
                 <?=Run::post_image($page_data['image'], $alt = strip_tags($page_data['image_caption'])); ?>
             </div>
     
