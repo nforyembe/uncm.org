@@ -16,17 +16,11 @@
                     
                 <img src="<?=PATH_TO_IMAGES . $features['image']; ?>" alt="<?=strip_tags($features['title']); ?>" class="">
     
-                <div class="carousel-caption fw-bold">
+                <div class="caption mt-3 small line-height-normal fw-bold">
                     <?php 
                         if(!empty($features['title'])) echo $features['title'];
                         if(!empty($features['content'])) echo '<small>' . $features['content'] . '</small>';
                     ?>
-                        
-                    <?php if($features['link']!=''): ?>
-                        <section class="mt-3">
-                            <a href="<?=BASE_URL . '/' . $features['link'] ?>" class="btn btn-custom-base px-5">Learn More</a>
-                        </section>
-                    <?php endif; ?>
                 </div>
             </div>
     

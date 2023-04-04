@@ -324,29 +324,29 @@ class FormProcess {
             
             $errors = $progress = $submitted = $form_feedback = array();
 
-            if (!defined('DEVELOPMENT')) {
+            // if (!defined('DEVELOPMENT')) {
 
-                if (isset($_SESSION['captcha_code'])) {
+            //     if (isset($_SESSION['captcha_code'])) {
                     
-                    if (isset($_POST['captcha'])) {
+            //         if (isset($_POST['captcha'])) {
                             
-                        if($_POST['captcha'] != $_SESSION['captcha_code']) {
-                            $errors[] = 'Wrong Captcha!!!';
-                        }
+            //             if($_POST['captcha'] != $_SESSION['captcha_code']) {
+            //                 $errors[] = 'Wrong Captcha!!!';
+            //             }
                         
-                    } else {
+            //         } else {
 
-                        $errors[] = 'No captcha verification was sent';
+            //             $errors[] = 'No captcha verification was sent';
                         
-                    }
+            //         }
 
-                } else {
+            //     } else {
                     
-                    $errors[] = 'Captcha verification is not active';
+            //         $errors[] = 'Captcha verification is not active';
                     
-                }
+            //     }
 
-            }
+            // }
 
             $submitted['username'] = $_COOKIE['username'] = $this->check_and_assign_post_value('username', 'Names cannot be empty', $errors);
             $submitted['password'] = $_COOKIE['password'] = $this->check_and_assign_post_value('password', 'Email cannot be empty', $errors);

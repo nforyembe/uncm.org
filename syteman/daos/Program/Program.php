@@ -9,7 +9,11 @@ class Program extends Feature
         parent::__construct();
 
         $this->feature = 'program';
+
+        // For front end... the page on which the features will be displayed
         $this->feature_page = 'what-we-do';
+        $this->template_preview = 'program-preview.html';
+
 
         $this->feature_table = 'programs';
         $this->feature_content_table = 'program_content';

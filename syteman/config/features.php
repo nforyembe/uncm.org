@@ -51,18 +51,11 @@ return [
         'title' => 'Carousel'
     ],
 
-    'programs' => [
-        'link' => 'programs',
-        'icon' => 'leaf',
-        'class' => 'Program',
-        'title' => 'Org Programs'
-    ],
-
-    'news' => [
-        'link' => 'news',
-        'icon' => 'newspaper',
-        'class' => 'News',
-        'title' => 'News'
+    'events' => [
+        'link' => 'events',
+        'icon' => 'calendar',
+        'class' => 'Event',
+        'title' => 'events'
     ],
 
     'stories' => [
@@ -72,11 +65,39 @@ return [
         'title' => 'Impact Stories'
     ],
 
+    'programs' => [
+        'link' => 'programs',
+        'icon' => 'leaf',
+        'class' => 'Program',
+        'title' => 'Org Programs'
+    ],
+
+    'projects' => [
+        'link' => 'projects',
+        'icon' => 'list',
+        'class' => 'Project',
+        'title' => 'Org Projects'
+    ],
+
+    'news' => [
+        'link' => 'news',
+        'icon' => 'newspaper',
+        'class' => 'News',
+        'title' => 'News'
+    ],
+
     'partners' => [
         'link' => 'partners',
         'icon' => 'handshake',
         'class' => 'Partner',
         'title' => 'Partners'
+    ],
+
+    'team' => [
+        'link' => 'team',
+        'icon' => 'users',
+        'class' => 'Team',
+        'title' => 'team'
     ],
     
     'blog' => [
@@ -98,6 +119,13 @@ return [
         'icon' => 'feather-alt',
         'class' => 'Poem',
         'title' => 'Poems'
+    ],
+    
+    'social' => [
+        'link' => 'social',
+        'icon' => 'icons',
+        'class' => 'Social',
+        'title' => 'Social Links'
     ],
     
     'test_feature' => [

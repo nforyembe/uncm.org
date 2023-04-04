@@ -499,7 +499,7 @@ class PageBuilder extends Db
 
 
                 // Create a variable and rules for paginating features
-                $results_per_page = 9;
+                $results_per_page = 15;
                 $current_page = (Route::is_paginated() != null) ? Route::is_paginated() : 1;
                 $results_limit = (($current_page - 1) * $results_per_page) . ',' . $results_per_page;
 
@@ -509,7 +509,7 @@ class PageBuilder extends Db
                     $feature_link = Route::is_feature_page()[1];
                     
                     $feature_data = $object->fetch_data_for_this_feature($feature_link)[0];
-                    $template = Run::get_template_file($page_data['template'], 'default-feature-view.html');
+                    $template = Run::get_template_file($page_data['template'], (isset($object->template_preview) ? $object->template_preview : null));
                     
                 } else {
                     
@@ -523,7 +523,7 @@ class PageBuilder extends Db
                             $category_data = $object->fetch_data_for_this_category($category)[0];
                             $all_features = $object->fetch_features_by_category($category);
                             $features = $object->fetch_features_by_category($category, ['limit' => $results_limit]);
-                            $template = Run::get_template_file($page_data['template']);
+                            $template = Run::get_template_file($page_data['template'], (isset($object->template_preview) ? $object->template_preview : null));
 
                         } else {
                             
@@ -536,7 +536,7 @@ class PageBuilder extends Db
                     } else {
 
                         $features = $object->fetch_all_features(['limit' => $results_limit]);
-                        $template = Run::get_template_file($page_data['template']);
+                        $template = Run::get_template_file($page_data['template'], (isset($object->template_preview) ? $object->template_preview : null));
 
                     }
 

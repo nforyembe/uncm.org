@@ -7,11 +7,11 @@
 
 <div class="col-11 col-lg-5 order-lg-2 feature">
 
-    <div class="position-relative shadow-custom-secondary-sm">
+    <div class="image position-relative shadow-custom-secondary-sm" style="height:auto">
         <?php if (isset($feature_data['image'])):
             echo Run::post_image(
                 $feature_data['image'], 
-                $alt = isset($feature_data['image_caption']) ? $feature_data['image_caption'] : ''
+                ['alt' => (isset($feature_data['image_caption']) ? $feature_data['image_caption'] : '')]
             );
         endif; ?>
 
@@ -66,7 +66,20 @@
     ?>
 
     <?=!empty($feature_data['first_name']) 
-        ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">Names</span><br>' . $feature_data['first_name'] . '</div>' 
+        ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">Names</span><br>' 
+            . $feature_data['first_name'] 
+            . (!empty($feature_data['last_name']) ? ' ' . $feature_data['last_name'] : '')
+            . '</div>' 
+        : '' 
+    ?>
+
+    <?=!empty($feature_data['position']) 
+        ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">Position</span><br>' . $feature_data['position'] . '</div>' 
+        : '' 
+    ?>
+
+    <?=!empty($feature_data['icon']) 
+        ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">Icon</span><br><i class="' . $feature_data['icon'] . '"></i></div>' 
         : '' 
     ?>
 
@@ -107,6 +120,11 @@
 
     <?=!empty($feature_data['description'])
         ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">Description</span><br>' . $feature_data['description'] . '</div>'
+        : ''
+    ?>
+
+    <?=!empty($feature_data['profile'])
+        ? '<div class="w-100 p-2 my-2 border-bottom"><span class="badge bg-secondary text-white">P  rofile</span><br>' . $feature_data['profile'] . '</div>'
         : ''
     ?>
 

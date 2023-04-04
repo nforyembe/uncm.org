@@ -76,6 +76,11 @@
                 : '' 
             ?>
                     
+            <?=isset($feature_data['icon']) 
+                ? '<div class="col-12 mb-3"><input class="form-control" name="icon" placeholder="Icon" value="' . $feature_data['icon'] . '" /></div>' 
+                : '' 
+            ?>
+                    
             <?=isset($feature_data['url']) 
                 ? '<div class="col-12 mb-3"><input class="form-control" name="url" placeholder="URL" value="' . $feature_data['url'] . '" /></div>' 
                 : '' 
@@ -98,6 +103,11 @@
                     
             <?=isset($feature_data['nav_title'])
                 ? '<div class="col mb-3"><input class="form-control" placeholder="Nav Title" name="nav_title" value="' . $feature_data['nav_title'] . '" /></div>' 
+                : '' 
+            ?>
+                    
+            <?=isset($feature_data['position'])
+                ? '<div class="col mb-3"><input class="form-control" placeholder="Position" name="position" value="' . $feature_data['position'] . '" /></div>' 
                 : '' 
             ?>
 

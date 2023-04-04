@@ -1,0 +1,49 @@
+<!-- 
+    All of the Content from the DB that can be used on this file have been passed as a $feature_data associative array.
+    You can <?php // var_dump($feature_data) ?> to see all what content is being returned. 
+-->
+<div class="col-11 col-lg-2 mb-4">
+    <div class="team text-center">
+    
+        <div class="image">
+            <?=isset($feature_data['image']) 
+                ? Run::post_image(
+                    $feature_data['image'], 
+                    ['alt' => (isset($feature_data['image_caption']) ? strip_tags($feature_data['image_caption']) : null)]
+                )
+                : ''; 
+            ?>
+        </div>
+        
+        <div class="text p-3 shadow-sm">
+            <?=isset($feature_data['first_name']) 
+                ? '<h5 class="h6 m-0 fw-bold">' . $feature_data['first_name'] 
+                    . (isset($feature_data['last_name']) ? ' ' . $feature_data['last_name'] : '')
+                    . '</h5>'
+                : '' 
+            ?>
+    
+            <?=isset($feature_data['position'])
+                ? '<p>' . strip_tags($feature_data['position']) . '</p>'
+                : ''
+            ?>
+    
+            <?=isset($feature_data['link']) 
+                ? '<span class="fw-bold text-uppercase"><a href="' . BASE_URL . '/' . CURRENT_PAGE 
+                    . (
+                        isset($page_data['link']) 
+                            ? $page_data['link'] 
+                            : (
+                                isset($feature_page)
+                                    ? $feature_page
+                                    : ''
+                            )
+                    )
+                    . '/' . $feature_data['link']
+                    . '" class="">[ profile ]</a></span>' 
+                : '' 
+            ?>        
+        </div>
+        
+    </div>
+</div>

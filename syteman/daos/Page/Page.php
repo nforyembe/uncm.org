@@ -8,16 +8,10 @@ class Page extends Feature
 
         parent::__construct();
 
-        // For front end... the page on which the features will be displayed
-        // $this->feature_page = 'pages';
-        // $this->template_preview = 'default-feature-preview.html';
-
         $this->feature = 'page';
         $this->feature_category = 'page_category';
-
         $this->feature_category_table = 'page_categories';
         $this->feature_category_content_table = 'page_category_content';
-
         $this->feature_table = 'pages';
         $this->feature_content_table = 'page_content';
 
