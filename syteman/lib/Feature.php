@@ -660,11 +660,17 @@ class Feature extends Db {
     {
         
         $sql_params = [
-            'table_name' => $this->feature_table,
-            'columns' => $this->select_columns,
+            'table_name' => isset($params['table_name']) ? $params['table_name'] : $this->feature_table,
+            'columns' => isset($params['columns']) ? $params['columns'] : $this->select_columns,
         ];
         
-        if (isset($this->feature_content_table)) {
+        if (isset($params['content_table_name'])) {
+            
+            $sql_params['join'] = [
+                $params['content_table_name'] => (isset($params['table_name']) ? $params['table_name'] : $this->feature_table) . '.id=' . $params['content_table_name'] . '.' . $this->feature . '_id'
+            ];
+
+        } elseif (isset($this->feature_content_table)) {
 
             $sql_params['join'] = [
                 $this->feature_content_table => $this->feature_table . '.id=' . $this->feature_content_table . '.' . $this->feature . '_id'
@@ -679,6 +685,8 @@ class Feature extends Db {
 
             foreach ($params as $set => $condition) $sql_params[$set] = $condition;
             
+            if (isset($params['sort'])) $sql_params['sort'] = $params['sort'];
+
             if (isset($params['limit'])) $sql_params['limit'] = $params['limit'];
 
         }

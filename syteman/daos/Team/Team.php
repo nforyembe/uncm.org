@@ -15,6 +15,7 @@ class Team extends Feature
         // For front end... the page on which the features will be displayed
         $this->feature_page = 'team';
         $this->template_preview = 'team-preview.html';
+        $this->template_detail = 'team-detail.html';
 
         // Define the names of the tables as on db
         $this->feature_category_table = 'team_categories';
@@ -62,6 +63,7 @@ class Team extends Feature
             . $this->feature_table . '.link AS link,'
             . $this->feature_table . '.first_name AS first_name,'
             . $this->feature_table . '.last_name AS last_name,'
+            . 'concat(' . $this->feature_table . '.first_name, " ", ' . $this->feature_table . '.last_name) AS title,'
             . $this->feature_table . '.image AS image,'
             . $this->feature_table . '.from_date AS from_date,'
             . $this->feature_table . '.to_date AS to_date,'
@@ -108,6 +110,15 @@ class Team extends Feature
     {
         
         return parent::add_feature_data();
+
+    }
+
+
+    public function fetch_all_features($params=null) 
+    {
+
+        $params = ['sort' => 'id ASC'];
+        return parent::fetch_all_features($params);
 
     }
 

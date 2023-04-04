@@ -13,7 +13,7 @@
 					// So fetch the content from that feature's table and display.
 					$values = [
 						'feature_data' => $feature_data,
-						'template' => PATH_TO_THEME . '/web/views/default-feature-view.html',
+						'template' => (!isset($template) ? PATH_TO_THEME . '/web/views/default-feature-view.html' : $template),
 						'back' => $page_data['link']
 					];
 

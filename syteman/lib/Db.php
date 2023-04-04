@@ -380,7 +380,7 @@ class Db {
 
         if (isset($sql_params['limit'])) $query .= ' LIMIT ' . $sql_params['limit'];
 
-        // var_dump($query);
+        // printf($query);
 
         $prepared_query = $this->db->prepare($query);
         $retrieve = $prepared_query->execute();
